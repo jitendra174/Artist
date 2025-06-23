@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styling for HTML elements */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark-bg text-dark-text font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-dark-text;
+  }
+
+  a {
+    @apply text-dark-accent hover:underline;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .bg-background {
+    @apply bg-dark-bg;
+  }
+
+  .text-text {
+    @apply text-dark-text;
+  }
+
+  .bg-card {
+    @apply bg-dark-card;
+  }
+
+  .text-accent {
+    @apply text-dark-accent;
+  }
+
+  .btn-primary {
+    @apply bg-dark-accent text-white font-semibold px-4 py-2 rounded-lg hover:bg-dark-accent/80 transition;
+  }
+
+  .input-dark {
+    @apply bg-dark-card text-white border border-gray-700 rounded-lg px-3 py-2 w-full;
+  }
+}
