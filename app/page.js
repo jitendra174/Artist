@@ -1,9 +1,14 @@
-"use client";
-
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import SplashScreen from "../components/SplashScreen";
 
 export default function HomePage() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const categories = [
     { name: "Singers", image: "/images/artists/singers.jpg" },
     { name: "Dancers", image: "/images/artists/dancers.jpg" },
@@ -13,7 +18,7 @@ export default function HomePage() {
 
   return (
     <>
-      <SplashScreen />
+      {isClient && <SplashScreen />}
       <section className="pt-32 px-6 pb-20 text-center bg-dark-bg text-dark-text min-h-screen">
         <h1 className="text-4xl md:text-5xl font-bold text-dark-accent mb-6">
           Discover Top Performing Artists
