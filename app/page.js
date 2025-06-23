@@ -1,34 +1,7 @@
+"use client";
+
 import Link from "next/link";
 import SplashScreen from "../components/SplashScreen";
-
-
-export const metadata = {
-  title: "Artistly - Book Top Performing Artists",
-  description:
-    "Discover and book popular singers, dancers, comedians, and more from Telugu states and Chennai for your events.",
-  keywords: [
-    "artist booking",
-    "singers in Hyderabad",
-    "dancers in Chennai",
-    "event performers",
-    "Artistly"
-  ],
-  openGraph: {
-    title: "Artistly - Book Top Performing Artists",
-    description: "Your one-stop platform to discover talented artists in South India.",
-    url: "https://artistly.com",
-    siteName: "Artistly",
-    images: [
-      {
-        url: "/images/seo-banner.jpg", 
-        width: 1200,
-        height: 630,
-        alt: "Artistly Event Banner",
-      },
-    ],
-    type: "website",
-  },
-};
 
 export default function HomePage() {
   const categories = [
@@ -41,16 +14,13 @@ export default function HomePage() {
   return (
     <>
       <SplashScreen />
-
       <section className="pt-32 px-6 pb-20 text-center bg-dark-bg text-dark-text min-h-screen">
-        {/* Heading and CTA */}
         <h1 className="text-4xl md:text-5xl font-bold text-dark-accent mb-6">
           Discover Top Performing Artists
         </h1>
         <p className="text-lg max-w-2xl mx-auto text-gray-400 mb-8">
           Book talented singers, dancers, comedians, and more from Telugu states & Chennai for your events.
         </p>
-
         <Link
           href="/artists"
           className="inline-block bg-dark-accent hover:bg-dark-accent/80 text-white px-6 py-3 rounded-full text-lg font-semibold transition"
@@ -58,9 +28,6 @@ export default function HomePage() {
           Explore Artists
         </Link>
 
-
-
-        {/* Category grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-6xl mx-auto">
           {categories.map((cat) => (
             <div

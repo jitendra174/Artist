@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata = {
-  title: "Artistly – Book South India's Top Talent",
+  title: "Artistly",
   description: "Discover and manage artists from Telugu states and Chennai",
   keywords: [
     "artist booking",
